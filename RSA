@@ -1,4 +1,5 @@
 // This MAGMA code can be compiled at http://magma.maths.usyd.edu.au/calc/
+// Learn more about Public Key Cryptography at: https://youtu.be/k4_Up_0atGw?si=aeNTmlDElFQXUhFS
 
 // Dr. Misseldine's Public Key
 e := 17;
