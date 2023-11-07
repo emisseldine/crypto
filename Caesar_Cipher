@@ -1,5 +1,5 @@
 //This MAGMA code can be compiled at http://magma.maths.usyd.edu.au/calc/
-
+//Learn more about Symmetric Key Cryptography at: https://youtu.be/q-qx0Einjws?si=31hBWyAiqPIp9x6w
 Digitize := function(message); 
 E := [];
 m := 0;
