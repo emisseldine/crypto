@@ -56,8 +56,6 @@ return Alphabetize(P);
 end function;
 
 //Examples 
-
-CaesarEncrypt("We ride at noon", 3);
-CaesarEncrypt("WEXRIDEXATXNOON", 3);
+CaesarEncrypt("We x ride x at x n noon", 3);
 
 CaesarDecrypt("DOJHEUD", 3);
