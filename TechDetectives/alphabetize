@@ -18,3 +18,5 @@ for i:= 1 to #code do
 end for;
 return D;
 end function;
+
+Alphabetize([ 4, 21, 4, 23, 7, 0, 18, 23, 2, 14, 14, 19, 8, 4, 18 ]);
