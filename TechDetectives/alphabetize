@@ -1,3 +1,20 @@
 //This MAGMA code can be compiled at http://magma.maths.usyd.edu.au/calc/
 //Learn more about Symmetric Key Cryptography at: https://youtu.be/q-qx0Einjws?si=31hBWyAiqPIp9x6w
 
+Alphabetize := function(code); 
+D := "";
+for i:= 1 to #code do
+    case code[i]:
+    when 0: D cat:="A"; when 1: D cat:="B"; when 2: D cat:="C";
+    when 3: D cat:="D"; when 4 : D cat:="E"; when 5: D cat:="F";
+    when 6: D cat:="G"; when 7: D cat:="H"; when 8: D cat:="I";
+    when 9: D cat:="J"; when 10: D cat:="K"; when 11: D cat:="L";
+    when 12: D cat:="M"; when 13: D cat:="N"; when 14: D cat:="O";
+    when 15: D cat:="P"; when 16: D cat:="Q"; when 17: D cat:="R";
+    when 18: D cat:="S"; when 19: D cat:="T"; when 20: D cat:="U";
+    when 21: D cat:="V"; when 22: D cat:="W"; when 23: D cat:="X";
+    when 24: D cat:="Y"; when 25: D cat:="Z";
+    end case;
+end for;
+return D;
+end function;
