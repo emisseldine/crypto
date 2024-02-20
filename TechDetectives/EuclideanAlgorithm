@@ -1,9 +1,9 @@
 //This MAGMA code can be compiled at http://magma.maths.usyd.edu.au/calc/
 //Learn more about Symmetric Key Cryptography at: https://youtu.be/q-qx0Einjws?si=31hBWyAiqPIp9x6w
 
-EuclideanAlgorithm := function(a,b);
+EuclideanAlgorithm := function(a,N);
     Q := [];
-    R := [b,a];
+    R := [a,N];
     while R[1] ne 1 do
        Insert(~Q,1, R[2] div R[1]);
        Insert(~R,1, R[2] mod R[1]);
@@ -14,13 +14,13 @@ EuclideanAlgorithm := function(a,b);
     for i := 1 to #Q do
         if (i mod 2) eq 1 then
             t :=  t - s*Q[i];
-            s,t, s*R[i+2]+t*R[i+1];
+            s,t;
         else
             s := s - t*Q[i];
-            s,t, s*R[i+1]+t*R[i+2];
+            s,t;
         end if;
     end for;
-    if (#Q mod 2) eq 1 then
+    if (#Q mod 2) eq 0 then
         return s;
     else
         return t;
