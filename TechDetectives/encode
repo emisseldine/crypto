@@ -1,3 +1,6 @@
+//This MAGMA code can be compiled at http://magma.maths.usyd.edu.au/calc/
+//Learn more about Symmetric Key Cryptography at: https://youtu.be/q-qx0Einjws?si=31hBWyAiqPIp9x6w
+
 EncodeMessage := function(message, N);
 code := [];
 E := "";
@@ -72,7 +75,7 @@ end for;
 return M;
 end function;
 
-\\ example
+// example
 N := 6983046478861697791516198336161862134017;
 E := EncodeMessage("Four score and seven years ago our fathers brought forth on this continent, 
                     a new nation, conceived in Liberty, and dedicated to the proposition that 
