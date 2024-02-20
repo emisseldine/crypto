@@ -77,16 +77,28 @@ end function;
 
 AffineEncrypt := function(plaintext, a, b, N);
 P := EncodeMessage(plaintext, N);
-C := [];
+ciphertext := [];
 for i := 1 to #P do
-    C cat:= [(a*P[i]+b) mod N];
+    ciphertext cat:= [(a*P[i]+b) mod N];
 end for;
-return C;
+return ciphertext;
+end function;
+
+AffineDecrypt := function(ciphertext, a, b, N);
+P := [];
+ainv := InverseMod(a,N);
+binv := ainv*b;
+for i := 1 to #ciphertext do
+    P cat:= [(ainv*ciphertext[i]-binv) mod N];
+end for;
+return DecodeMessage(P);
 end function;
 
 // example
 N := 6983046478861697791516198336161862134017;
-a := 5;
-b := 3;
-C := AffineEncrypt("One if by land, two if by sea", 5, 3, N); C;
-DecodeMessage(C);
+a := 17;
+b := 101;
+C := AffineEncrypt("One if by land, two if by sea", a, b, N); 
+C, DecodeMessage(C);
+
+AffineDecrypt(C,a,b,N);
