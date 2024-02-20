@@ -28,4 +28,4 @@ EuclideanAlgorithm := function(a,b);
 end function;
 
 //Example 
-EuclideanAlgorithm(59,N);
+EuclideanAlgorithm(59,6983046478861697791516198336161862134017);
