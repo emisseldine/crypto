@@ -1,0 +1,23 @@
+//This MAGMA code can be compiled at http://magma.maths.usyd.edu.au/calc/
+//Learn more about Symmetric Key Cryptography at: https://youtu.be/q-qx0Einjws?si=31hBWyAiqPIp9x6w
+
+RepeatedSquares := function(base,power,N);
+    Bin := Intseq(power,2);
+    powers := [base];
+    if Bin[1] eq 1 then
+        product := base;
+    else 
+        product := 1;
+    end if; 
+    for i := 2 to #Bin do
+        powers cat:= [(powers[i-1]^2) mod N];
+        if Bin[i] eq 1 then
+            product := (product*powers[i]) mod N;
+        end if; 
+    end for;
+    Bin, powers;
+    return product;
+end function;
+
+//Example
+RepeatedSquares(271, 321, 481);
