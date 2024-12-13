@@ -2,8 +2,9 @@
 // Learn more about Public Key Cryptography at: https://youtu.be/k4_Up_0atGw?si=aeNTmlDElFQXUhFS
 
 // Dr. Misseldine's Public Key
+// Send me an encrypted message sometime at andrewmisseldine@suu.edu
 e := 17;
-n := 35110944959733158664988112258172774548720150841388123362271854264225878577091854330261373358469426124449567983; //Can you factor this?
+n := 1030939719288293437227911877452767233915886422910927826089912725109886136705892109592272121542938809416816702749278385596820061415954841542352923327267600354767; //Can you factor this? You could try using https://www.alpertron.com.ar/ECM.HTM
 
 EncodeMessage := function(message, N);
 code := [];
